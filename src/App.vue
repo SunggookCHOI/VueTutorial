@@ -1,21 +1,15 @@
 <template>
   <div id="app">
-    <div id="header">
-      <Header/>
-    </div>
-    <div id="promise-list">
-      <PromiseList/>
-    </div>
+    <Header/>
+    <router-view/>
   </div>
 </template>
  
 <script>
 import Header from "./components/Header.vue"
-import PromiseList from "./components/PromiseList.vue"
 export default {
   components : {
-    "Header" : Header,
-    "PromiseList" : PromiseList
+    "Header" : Header
   }
 }
 </script>

@@ -3,7 +3,11 @@
     ASDFASDFASDFASF <br>
     <ul>
         <li v-for="promise in promises">
-            {{promise.promiseName}}
+            <div class="prom" @click="$router.push({name:'promiseDetail',params:{promise:promise}})">
+                {{promise.promiseName}}<br>
+                {{promise.placeName}}<br>
+                {{promise.promiseTime}}
+            </div>
         </li>
     </ul>
   </div>
@@ -23,7 +27,6 @@ export default {
                 }
             })
             .then( res =>{
-                console.log("asdf")
                 this.promises = res.data
             }).catch(e =>{
                 this.promises = e
@@ -40,3 +43,14 @@ export default {
     }
 }
 </script>
+
+<style>
+  div.prom {
+      border: 2px solid black;
+      border-radius: 5px;
+      margin : 10px;
+  }
+  li {
+    list-style-type: none;
+ }
+</style>
