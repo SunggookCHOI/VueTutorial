@@ -40,6 +40,8 @@ export default {
     },
     created(){
         this.getPromise()
+        console.log('asdf')
+        console.log(this.$store.accessToken)
     }
 }
 </script>

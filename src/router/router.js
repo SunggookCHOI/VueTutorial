@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import PromiseList from '../components/PromiseList.vue'
 import Promise from '../components/promise/Promise.vue'
 import Login from '../components/Login.vue'
+import Token from '../components/Token.vue'
 
 Vue.use(Router);
 
@@ -17,10 +18,9 @@ const router = new Router({
         },
         {
             path: '/my-promise',
-            name: 'All of my promises',
+            name: 'promises',
             component: PromiseList,
-        }
-        ,
+        },
         {
             path: '/login',
             name: 'Log in',
@@ -30,6 +30,11 @@ const router = new Router({
             path: '/promise',
             name: 'promiseDetail',
             component: Promise,
+        },
+        {
+            path: '/token',
+            name: 'Token',
+            component: Token,
         },
         /*
       {
